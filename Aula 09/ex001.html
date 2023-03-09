@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(89, 79, 228);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Iniciando os estudos de Dom</h1>
+    <p>Aqui vai o resultado</p>
+    <p>aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em Mim</div>
+    <div name="mens">Clique em Mim</div>
+    <div class="msn">Clique em Mim</div>
+    <div id="m">Clique em Mim</div>
+
+
+    <script>
+
+        /* --Seleção de Objetos--
+            getElementsByTagName()[]    (Plural)
+            getElementById()            (Singular)
+            getElementsByName()[]       (Plural)
+            getElementsByCalssName()[]  (Plural)
+            
+            --Seleção por Seletor--
+            querySelector()             (Singular)
+            querySelectorAll()          (Plural)
+        */
+
+        var p1 = window.document.getElementsByTagName('p')[0]       // Seleção por tags
+        window.document.write('No 1° parágrafo esta: ' + '"' +p1.innerText + '"')  // Escreve uma novo paragrafo
+        var corpo = window.document.body  
+        corpo.style.background = 'black'        // Muda a cor do backgound do body
+        p1.style.color = "red"                  // Muda a cor do paragrafo selecionado
+
+        var teste1 = document.getElementById('msg')     // Seleção por Id's
+        teste1.style.background = 'darkgray'    // Muda a cor do backgound do Id selecionado
+
+        var teste2 = document.getElementsByName('mens')[0]     // Seleção por Name
+        teste2.style.background = 'darkred'     // Muda a cor do backgound do Name selecionado
+        teste2.innerText = 'Olá, tudo bem?'     // Muda a frase do paragrafo
+        
+        var teste3 = window.document.getElementsByClassName('msn')[0]     // Seleção por Class
+        teste3.style.background = 'orange'      // Muda a cor do backgound do Name selecionado
+        teste3.innerText = 'Testando dnv....'   // Muda a frase do paragrafo
+
+        var teste4 = document.querySelector('div#m')    // Seleção por Seletor
+        m.style.color = 'black'         // Muda a cor da fonte do selecionado
+        m.style.background = 'white'    // Muda a cor do backgound do selecionado
+
+</script>
+</body>
+</html>
